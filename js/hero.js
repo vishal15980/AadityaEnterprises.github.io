@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const logo = document.createElement("div");
   logo.className = "site-logo";
   // You can change the emoji later or replace it with an image
-  logo.innerHTML = '<span class="site-logo-emoji">⚡</span><span class="site-logo-text">Aditya Enterprises</span>';
+  logo.innerHTML = '<span class="site-logo-emoji">https://res.cloudinary.com/dbrzpkme5/image/upload/v1766069991/Copy_of_ADITYA_3_usm28g.png</span><span class="site-logo-text">Aditya Enterprises</span>';
 
   headerInner.appendChild(logo);
   header.appendChild(headerInner);
