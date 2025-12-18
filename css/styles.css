@@ -41,12 +41,14 @@ body {
   color: #5dceff;
 }
 
-.site-logo-emoji {
-  font-size: 1.4rem;
-}
-
 .site-logo-text {
   font-size: 0.9rem;
+}
+
+.site-logo-img {
+  height: 28px;
+  width: auto;
+  display: block;
 }
 
 /* ===== Hero Section ===== */
