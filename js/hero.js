@@ -1,37 +1,50 @@
-// Dynamically create hero section with image for the homepage
+// Build header + hero section with image for the homepage
 document.addEventListener("DOMContentLoaded", () => {
   const body = document.body;
 
-  // Create hero container
+  // ===== Header with logo (emoji + name) =====
+  const header = document.createElement("header");
+  header.className = "site-header";
+
+  const headerInner = document.createElement("div");
+  headerInner.className = "site-header-inner";
+
+  const logo = document.createElement("div");
+  logo.className = "site-logo";
+  // You can change the emoji later or replace it with an image
+  logo.innerHTML = '<span class="site-logo-emoji">⚡</span><span class="site-logo-text">Aditya Enterprises</span>';
+
+  headerInner.appendChild(logo);
+  header.appendChild(headerInner);
+
+  // Insert header at very top of body
+  body.insertBefore(header, body.firstChild);
+
+  // ===== Hero section =====
   const hero = document.createElement("section");
   hero.className = "hero";
 
-  // Create content wrapper
   const heroContent = document.createElement("div");
   heroContent.className = "hero-content";
 
-  // Heading
   const heading = document.createElement("h1");
-  heading.textContent = "Welcome to Aaditya Enterprises";
+  heading.textContent = "Welcome to Aditya Enterprises";
 
-  // Subheading
   const subheading = document.createElement("p");
   subheading.textContent =
     "Quality products and services, delivered with trust.";
 
-  // Button
   const cta = document.createElement("button");
   cta.textContent = "Learn More";
   cta.className = "hero-btn";
 
-  // Image container
   const imgWrapper = document.createElement("div");
   imgWrapper.className = "hero-image-wrapper";
 
   const img = document.createElement("img");
   // You can replace this filename later with your real website photo
   img.src = "images/website-hero.jpg";
-  img.alt = "Aaditya Enterprises website preview";
+  img.alt = "Aditya Enterprises website preview";
   img.className = "hero-image";
 
   imgWrapper.appendChild(img);
@@ -43,8 +56,7 @@ document.addEventListener("DOMContentLoaded", () => {
   hero.appendChild(heroContent);
   hero.appendChild(imgWrapper);
 
-  // Insert hero at the top of the body
-  body.insertBefore(hero, body.firstChild);
+  // Insert hero after the header
+  body.insertBefore(hero, header.nextSibling);
 });
-
 
